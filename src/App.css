@@ -154,6 +154,34 @@ a[href$=".pdf"]:hover {
   opacity: 1;
 }
 
+/* Contact section styles */
+.contact-info {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #f5f7fa;
+  border-radius: 12px;
+  padding: 24px 18px;
+  box-shadow: 0 2px 12px rgba(74,144,226,0.07);
+  font-size: 1.08rem;
+}
+
+.contact-info p {
+  margin: 12px 0;
+  color: #222;
+}
+
+.contact-info a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact-info a:hover {
+  color: #626363;
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .App {
     padding: 12px;

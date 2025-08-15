@@ -199,18 +199,43 @@ function Exhibition() {
     <section>
       <h2>Exhibitions</h2>
       <div id="exhibition1" style={{ marginBottom: '40px' }}>
+        <Slideshow images={exhibition1} onImageClick={() => {}} />
         <h3>Nandan Gallery</h3>
         <p style={{ textAlign: 'center', color: '#444', marginBottom: '16px' }}>
           Group Exhibition – Nandan Gallery – Santiniketan – 2025
         </p>
-        <Slideshow images={exhibition1} onImageClick={() => {}} />
       </div>
       <div id="exhibition2">
+        <Slideshow images={exhibition2} onImageClick={() => {}} />
         <h3>Hues of Bengal</h3>
         <p style={{ textAlign: 'center', color: '#444', marginBottom: '16px' }}>
           Exploring the boundaries of glass art and mixed media installations in contemporary practice.
         </p>
-        <Slideshow images={exhibition2} onImageClick={() => {}} />
+      </div>
+    </section>
+  );
+}
+function Contact() {
+  return (
+    <section>
+      <h2>Contact</h2>
+      <div className="contact-info">
+        <p>
+          <strong>📧 Email:</strong> 
+          <a href="mailto:artistshubhankar@gmail.com"> artistshubhankar@gmail.com</a>
+        </p>
+        <p>
+          <strong>📞 Phone:</strong> 
+          <a href="tel:+919555452173"> +91 95554 52173</a>
+        </p>
+        <p>
+          <strong>💼 LinkedIn:</strong> 
+          <a href="https://www.linkedin.com/in/shubhankar-kumar-biswas-28745a24b/" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
+        </p>
+        <p>
+          <strong>📷 Instagram:</strong> 
+          <a href="https://www.instagram.com/shubhankar_ceramics?igsh=MWlqZ2lxMHVpemN5Yg==" target="_blank" rel="noopener noreferrer"> @shubhankar_ceramics</a>
+        </p>
       </div>
     </section>
   );
@@ -234,6 +259,7 @@ function App() {
           <a href="/my-portfolio-website#resume">Resume</a>
           <a href="/my-portfolio-website#artworks">Artworks</a>
           <a href="/my-portfolio-website#exhibition">Exhibition</a>
+          <a href="/my-portfolio-website#Contact">Contact</a>
         </nav>
       </header>
       <main>
@@ -242,6 +268,7 @@ function App() {
         <div id="resume"><Resume /></div>
         <div id="artworks"><Artworks /></div>
         <div id="exhibition"><Exhibition /></div>
+        <div id="contact"><Contact /></div>
       </main>
     </div>
   );
