@@ -1,38 +1,167 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #a1a1a1;
+  color: #222;
+}
+
 .App {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #878585;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  padding: 32px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #0a0a0a;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #060e17;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background: #eaf4ff;
+  color: #222;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 16px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  font-size: 1.0rem;
+  color: #222;
+  margin-bottom: 12px;
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain; /* Changed from cover to contain */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(74,144,226,0.08);
+  border: 2px solid #eaf4ff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff; /* Optional: adds a white background behind images */
+}
+
+.gallery-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 24px rgba(74,144,226,0.18);
+}
+
+a[href$=".pdf"] {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #4a90e2;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+a[href$=".pdf"]:hover {
+  background: #357abd;
+}
+
+.slideshow-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 32px auto;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(74,144,226,0.10);
+  background: #fff;
+}
+
+.slideshow-img {
+  width: 100%;
+  height: 340px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.5s;
+}
+
+.slideshow-dots {
+  text-align: center;
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #eaf4ff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: 2px solid #4a90e2;
+  opacity: 0.7;
+}
+
+.dot.active {
+  background: #4a90e2;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 12px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  header h1 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  .gallery-img {
+    height: 140px;
   }
 }
