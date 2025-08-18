@@ -94,7 +94,12 @@ const exhibition2 = [
   { src: '/my-portfolio-website/images/exi7.jpg', alt: 'Exhibition 2-3' },
   { src: '/my-portfolio-website/images/exi8.jpg', alt: 'Exhibition 2-4' },
 ];
-
+const exhibition3 = [
+  {src: '/my-portfolio-website/images/exi12.jpg', alt: 'Exhibition 3-0' },
+  { src: '/my-portfolio-website/images/exi9.jpg', alt: 'Exhibition 3-1' },
+  { src: '/my-portfolio-website/images/exi10.jpg', alt: 'Exhibition 3-2' },
+  { src: '/my-portfolio-website/images/exi11.jpg', alt: 'Exhibition 3-3' },
+];
 function Slideshow({ images, onImageClick }) {
   const [current, setCurrent] = useState(0);
   const timeoutRef = useRef(null);
@@ -210,6 +215,13 @@ function Exhibition() {
         <h3>Hues of Bengal</h3>
         <p style={{ textAlign: 'center', color: '#444', marginBottom: '16px' }}>
           Exploring the boundaries of glass art and mixed media installations in contemporary practice.
+        </p>
+      </div>
+      <div id="exhibition3">
+        <Slideshow images={exhibition3} onImageClick={() => {}} />
+        <h3>Birla Academy of Art and Culture, Kolkata</h3>
+        <p style={{ textAlign: 'center', color: '#444', marginBottom: '16px' }}>
+          Showcasing and Exploring new Art Forms from different parts of India - 2025.
         </p>
       </div>
     </section>
