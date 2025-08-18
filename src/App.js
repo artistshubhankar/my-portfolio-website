@@ -160,26 +160,43 @@ function Resume() {
   return (
     <section>
       <h2>Resume</h2>
-      <a
-        href="/my-portfolio-website/resume.pdf"
-        download
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Download Resume (PDF)
-      </a>
-      <div style={{ marginTop: '24px', width: '100%', height: '600px' }}>
+
+      {/* Resume Preview */}
+      <div style={{ marginTop: "24px", width: "100%", height: "600px" }}>
         <iframe
           src="/my-portfolio-website/resume.pdf"
           title="Resume"
           width="100%"
           height="100%"
-          style={{ border: '1px solid #eee', borderRadius: '8px' }}
+          style={{ border: "1px solid #eee", borderRadius: "8px" }}
         />
+      </div>
+      {/* Centered button container */}
+      <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+        <a
+          href="/my-portfolio-website/resume.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            padding: "12px 24px",
+            backgroundColor: "#007bff",
+            color: "#fff",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "bold",
+            transition: "background-color 0.3s",
+          }}
+          onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
+          onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
+        >
+          📄 Download Resume (PDF)
+        </a>
       </div>
     </section>
   );
 }
+
 
 function Artworks() {
   return (
@@ -197,7 +214,6 @@ function Artworks() {
     </section>
   );
 }
-
 
 function Exhibition() {
   return (
